@@ -1,0 +1,23 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: railsAPIAuth_development
+  username: postgres
+  password: root
+ 
+test:
+  <<: *default
+  database: railsAPIAuth_test
+  username: postgres
+  password: root
+
+production:
+  <<: *default
+  database: railsAPIAuth_production
+  username: postgres
+  password: root
